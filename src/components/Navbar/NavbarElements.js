@@ -1,12 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkScroll } from 'react-scroll'
 
 export const Nav = styled.nav`
-background: #000;
-height: 80px;
-  //margin-top: -80px;
+  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
+  height: 80px;
+  margin-top: -80px;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,7 @@ height: 80px;
   position: sticky;
   top:0;
   z-index:10;
+
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -65,6 +65,7 @@ export const NavMenu = styled.ul`
     display: none;
   }
 `
+
 export const NavItem = styled.li`
 height: 80px;
 `
@@ -78,9 +79,10 @@ height: 100%;
 cursor: pointer;
 
 &.active {
-    border: 3px solid darkblue;
+    border: 3px solid #117cf8;
 }
 `
+
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
@@ -88,6 +90,7 @@ export const NavBtn = styled.nav`
     display: none;
   }
 `
+
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
   background: #117cf8;

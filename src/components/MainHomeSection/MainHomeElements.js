@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
- 
+import { MdKeyboardArrowRight, MdArrowForward, MdKeyboardArrowLeft, MdArrowBack } from 'react-icons/md'
+
 export const MainHomeContainer = styled.div`
- background: #0c0c0c;
+  background: #0c0c0c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,18 @@ export const MainHomeContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
+
+  :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), 
+                linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+    z-index: 2;
+  }
 `
 export const MainHomeBg = styled.div`
   position: absolute;
@@ -54,16 +66,18 @@ export const MainHomeP = styled.p`
   font-size: 24px;
   text-align: center;
   max-width: 600px;
+
   @media screen and (max-width: 768px) {
     font-size: 24px
   }
+  
   @media screen and (max-width: 480px) {
     font-size: 18px
   }
 `
 export const MainHomeBtnWrapper = styled.div`
   margin-top: 32px;
-  display: flex;
+  display: inline flex;
   flex-direction: column;
   align-items: center;
 `
@@ -72,7 +86,18 @@ export const ArrowForward = styled(MdArrowForward)`
   margin-left: 8px;
   font-size: 20px;
 `
+
+export const ArrowBack = styled(MdArrowBack)`
+  margin-left: 8px;
+  font-size: 20px;
+`
+
 export const ArrowRight = styled(MdKeyboardArrowRight)`
+  margin-left: 8px;
+  font-size: 20px;
+`
+
+export const ArrowLeft = styled(MdKeyboardArrowLeft)`
   margin-left: 8px;
   font-size: 20px;
 `
