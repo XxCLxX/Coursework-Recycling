@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaYoutube, FaTelegram, FaTwitter } from 'react-icons/fa'
+import { FaYoutube, FaTelegram, FaTwitter, FaVk } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
 import { FooterContainer, FooterWrap, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterLinksContainer, SocialMedia, SocialMediaWrap, WebsiteRights, SocialIcons, SocialIconLink, SocialLogo } from './FooterElements'
 
@@ -45,10 +45,10 @@ const Footer = () => {
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/" onClick={toggleHome}>Recycle</SocialLogo>
-                        <WebsiteRights>Recycle © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+                        <WebsiteRights>Tomsk State University © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink gref="/" target="_blank" aria-label="VK">
-                                <FaTelegram />
+                                <FaVk />
                             </SocialIconLink>
 
                             <SocialIconLink gref="/" target="_blank" aria-label="Telegram">

@@ -79,7 +79,7 @@ height: 100%;
 cursor: pointer;
 
 &.active {
-    border: 3px solid #117cf8;
+    border-bottom: 3px solid #117cf8;
 }
 `
 
