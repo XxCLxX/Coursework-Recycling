@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { MdKeyboardArrowRight, MdArrowForward, MdKeyboardArrowLeft, MdArrowBack } from 'react-icons/md'
+import { MdShoppingCart, MdOutlineShoppingCart  } from 'react-icons/md'
+import { RiRecycleLine, RiRecycleFill } from "react-icons/ri";
 
 export const MainHomeContainer = styled.div`
   background: #0c0c0c;
@@ -82,22 +83,22 @@ export const MainHomeBtnWrapper = styled.div`
   align-items: center;
 `
 
-export const ArrowForward = styled(MdArrowForward)`
+export const MdCart = styled(MdShoppingCart)`
   margin-left: 8px;
   font-size: 20px;
 `
 
-export const ArrowBack = styled(MdArrowBack)`
+export const MdCartOutline = styled(MdOutlineShoppingCart)`
   margin-left: 8px;
   font-size: 20px;
 `
 
-export const ArrowRight = styled(MdKeyboardArrowRight)`
+export const BoldRecycle = styled(RiRecycleFill)`
   margin-left: 8px;
   font-size: 20px;
 `
 
-export const ArrowLeft = styled(MdKeyboardArrowLeft)`
+export const NormalRecycle = styled(RiRecycleLine)`
   margin-left: 8px;
   font-size: 20px;
 `

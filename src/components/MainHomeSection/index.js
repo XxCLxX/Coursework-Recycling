@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import Video from '../../videos/TSU-Recycle.mp4'
 import { Button } from '../ButtonElement'
-import { MainHomeContainer, MainHomeBg, VideoBg, MainHomeContent, MainHomeH1, MainHomeP, MainHomeBtnWrapper, ArrowForward, ArrowRight, ArrowLeft, ArrowBack } from './MainHomeElements'
+import { MainHomeContainer, MainHomeBg, VideoBg, MainHomeContent, MainHomeH1, MainHomeP, MainHomeBtnWrapper, MdCart, MdCartOutline, BoldRecycle, NormalRecycle } from './MainHomeElements'
 
 const MainHomeSection = () => {
   const [hover, setHover] = useState(false)
+  const [isShown, setIsShown] = useState(false);
 
-  const onHover = () => {
-    setHover(!hover)
-  }
+  //const onHover = () => {
+  //  setHover(!hover)
+  //}
 
   return (
     <MainHomeContainer>
@@ -24,16 +25,20 @@ const MainHomeSection = () => {
         </MainHomeP>
         <MainHomeBtnWrapper>
           <Button to="donate"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
             primary="true"
-            dark="true">Donate {hover ? <ArrowBack/> : <ArrowLeft />}</Button>
-            &nbsp;
+            dark="true"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >Donate{hover ? <NormalRecycle /> : <BoldRecycle />}</Button>
+
           <Button to="shop"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
             primary="true"
-            dark="true">Shop {hover ? <ArrowForward /> : <ArrowRight />}</Button>
+            dark="true"
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}>
+            Shop
+            {isShown ? <MdCartOutline /> : <MdCart />}
+          </Button>
         </MainHomeBtnWrapper>
       </MainHomeContent>
     </MainHomeContainer>
