@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Video from '../../videos/TSU-Recycle.mp4'
+import Video from '../../../videos/TSU-Recycle.mp4'
 import { Button } from '../ButtonElement'
 import { MainHomeContainer, MainHomeBg, VideoBg, MainHomeContent, MainHomeH1, MainHomeP, MainHomeBtnWrapper, MdCart, MdCartOutline, BoldRecycle, NormalRecycle } from './MainHomeElements'
 
