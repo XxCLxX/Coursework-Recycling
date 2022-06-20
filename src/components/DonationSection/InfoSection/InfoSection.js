@@ -1,9 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import { Container, Button } from '../donationStyles'
+import { Container } from '../donationStyles'
 import { InfoSec, InfoRow, InfoColumn, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img  } from './InfoSectionElements'
 
-const InfoSection = ({primary, lightBg, imgStart, lightTopLine, lightTextDesc, buttonLabel, description, headline, lightText, topLine, img, alt, start}) => {
+const InfoSection = ({primary, lightBg, imgStart, lightTopLine, lightTextDesc, description, headline, lightText, topLine, img, alt, start}) => {
   return (
     <>
     <InfoSec lightBg={lightBg}>
@@ -14,11 +13,6 @@ const InfoSection = ({primary, lightBg, imgStart, lightTopLine, lightTextDesc, b
                         <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                         <Heading lightText={lightText}>{headline}</Heading>
                         <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                        <Link to='/donation-form'>
-                            <Button big fontBig primary={primary}>
-                                {buttonLabel}
-                            </Button>
-                        </Link>
                     </TextWrapper>
                 </InfoColumn>
 
@@ -27,6 +21,7 @@ const InfoSection = ({primary, lightBg, imgStart, lightTopLine, lightTextDesc, b
                         <Img src={img} alt={alt} />
                     </ImgWrapper>
                 </InfoColumn>
+                
             </InfoRow>
         </Container>
     </InfoSec>

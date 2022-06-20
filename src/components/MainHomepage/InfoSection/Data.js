@@ -8,7 +8,7 @@ export const homeObjOne = {
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.',
     buttonLabel: 'Get Started',
     imgStart: false,
-    img: require('../../../images/visual-data.svg').default,
+    img: require('../../../images/environmental-study.svg').default,
     alt: 'visual graph',
     dark: true,
     primary: true,
