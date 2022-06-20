@@ -7,11 +7,11 @@ import Footer from '../components/Footer'
 const DonationPage = () => {
   return (
     <>
-        <Navbar/>
-        <InfoSection {...donateObjOne}/>
-        <InfoSection {...donateObjTwo}/>
-        <Instruct/>
-        <Footer/>
+      <Navbar />
+      <InfoSection {...donateObjOne} />
+      <InfoSection {...donateObjTwo} />
+      <Instruct />
+      <Footer />
     </>
   )
 }

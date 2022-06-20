@@ -1,24 +1,33 @@
 import styled from "styled-components"
 import { Container } from "../donationStyles"
 import { Link } from "react-router-dom"
-import { FaMagento } from "react-icons/fa";
+import { MdRecycling } from "react-icons/md"
 
 export const Nav = styled.nav`
-  background: #101522;
+  background: #000;
   height: 80px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
+
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `
 
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
+  //z-index: 1;
+  //width: 100%;
+  //padding: 0 24px;
+  //max-width: 1100px;
 
 ${Container}
 `
@@ -28,12 +37,15 @@ export const NavLogo = styled(Link)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
 `
 
-export const NavIcon = styled(FaMagento)`
+export const NavIcon = styled(MdRecycling)`
   margin-right: 0.5rem;
 `
 
@@ -48,6 +60,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    color: #fff;
   }
 `
 
@@ -57,6 +70,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
 
+  //960px
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
@@ -67,7 +81,7 @@ export const NavMenu = styled.ul`
     right: ${({ click }) => (click ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background: #000;
   }
 `
 
@@ -76,14 +90,17 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid #4b59f7;
+    border-bottom: 2px solid #00BFA6;;
   }
 
   @media screen and (max-width: 960px) {
     width: 100%;
+    height: 100px;
+    display: grid;
 
     &:hover {
       border: none;
+      transition: 1.3s ease-in-out;
     }
   }
 `
@@ -103,7 +120,7 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: #00BFA6;
       transition: all 0.3s ease;
     }
   }
@@ -119,6 +136,11 @@ export const NavBtnLink = styled(Link)`
   width: 100%;
   border: none;
   outline: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #010606;
+  }
 `
 
 export const NavItemBtn = styled.li`
@@ -130,4 +152,4 @@ export const NavItemBtn = styled.li`
     width: 100%;
     height: 120px;
   }
-`;
+`

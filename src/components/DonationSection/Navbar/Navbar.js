@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleClick = () => setClick(!click)
 
   const showButton = () => {
-    if(window.innerWidth <= 960) {
+    if (window.innerWidth <= 960) {
       setButton(false)
     } else {
       setButton(true)
@@ -21,7 +21,7 @@ const Navbar = () => {
   useEffect(() => {
     showButton();
   }, []);
-  
+
   //window.addEventListener('resize'. showButton)
 
   return (
@@ -44,25 +44,26 @@ const Navbar = () => {
               </NavItem>
 
               <NavItem>
-                <NavLinks to='/services'>
-                  Service
+                <NavLinks to='/shop'>
+                  Shop
                 </NavLinks>
               </NavItem>
 
               <NavItem>
-                <NavLinks to='/products'>
-                  Product
+                <NavLinks to='/donation'>
+                  How to Donate
                 </NavLinks>
               </NavItem>
+              
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to="/donation-form">
-                    <Button primary>FILL IN FORM</Button>
+                    <Button primary>Fill In Form</Button>
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to="/donation-form">
                     <Button fontBig primary>
-                      FILL IN FORM
+                      Fill in Form
                     </Button>
                   </NavBtnLink>
                 )}
