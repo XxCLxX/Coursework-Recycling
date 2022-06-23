@@ -1,7 +1,7 @@
 import Search from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import React from 'react'
+import React from 'react';
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -67,23 +67,23 @@ const Image = styled.img`
 `
 
 const Product = ({ item }) => {
-    return (
-        <Container>
-            <Circle />
-            <Image src={item.img} />
-            <Info>
-                <Icon>
-                    <ShoppingCartOutlinedIcon />
-                </Icon>
-                <Icon>
-                    <Search />
-                </Icon>
-                <Icon>
-                    <FavoriteBorderIcon />
-                </Icon>
-            </Info>
-        </Container>
-    )
+  return (
+    <Container>
+      <Circle />
+      <Image src={item.img} />
+      <Info>
+          <Icon>
+            <ShoppingCartOutlinedIcon />
+          </Icon>
+        <Icon>
+          <Search />
+        </Icon>
+        <Icon>
+          <FavoriteBorderIcon />
+        </Icon>
+      </Info>
+    </Container>
+  )
 }
 
 export default Product
