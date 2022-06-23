@@ -13,6 +13,10 @@ const MainHomeSection = () => {
     navigate('/donation');
   };
 
+  const navigateToShop = () => {
+    navigate('/shop');
+  };
+
   //const onHover = () => {
   //  setHover(!hover)
   //}
@@ -38,7 +42,8 @@ const MainHomeSection = () => {
             onMouseLeave={() => setHover(false)}
           >Donate{hover ? <NormalRecycle /> : <BoldRecycle />}</Button>
 
-          <Button to="shop"
+          <Button
+            onClick={navigateToShop}
             primary="true"
             dark="true"
             onMouseEnter={() => setIsShown(true)}
