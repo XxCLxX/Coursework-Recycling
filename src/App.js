@@ -7,6 +7,8 @@ import DonationForm from './pages/donation-form';
 import ShopPage from './pages/shop';
 import ProductList from './pages/ProductList';
 import ProductView from './pages/ProductView';
+import Register from './pages/Register';
+import Login from './pages/Login';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/product-view" element={<ProductView/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </Router>
   );
