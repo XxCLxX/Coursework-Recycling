@@ -3,6 +3,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import React from 'react';
 import styled from "styled-components";
+import {useNavigate} from "react-router-dom"
 
 const Info = styled.div`
   width: 100%;
@@ -67,6 +68,11 @@ const Image = styled.img`
 `
 
 const Product = ({ item }) => {
+  const navigate = useNavigate();
+  const navigateToProductView = () => {
+    navigate('/product-view');
+  };
+
   return (
     <Container>
       <Circle />
@@ -75,7 +81,7 @@ const Product = ({ item }) => {
           <Icon>
             <ShoppingCartOutlinedIcon />
           </Icon>
-        <Icon>
+        <Icon onClick={navigateToProductView}>
           <Search />
         </Icon>
         <Icon>
