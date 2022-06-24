@@ -78,6 +78,10 @@ const Navbar = () => {
         navigate('/login');
     };
 
+    const navigateToCart = () => {
+        navigate('/cart');
+    };
+
     return (
         <NavContainer>
             <NavWrapper>
@@ -95,7 +99,7 @@ const Navbar = () => {
                     <MenuItem onClick={navigateToDonation}>DONATE</MenuItem>
                     <MenuItem onClick={navigateToRegister}>REGISTER</MenuItem>
                     <MenuItem onClick={navigateToLogin}>LOGIN</MenuItem>
-                    <MenuItem>
+                    <MenuItem onClick={navigateToCart}>
                         <Badge badgeContent={4} color="primary">
                             <ShoppingCartIcon color="action" />
                         </Badge>
