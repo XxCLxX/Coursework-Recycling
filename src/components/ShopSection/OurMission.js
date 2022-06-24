@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 height: 60vh;
@@ -14,6 +15,7 @@ const Title = styled.h1`
 font-size: 70px;
 margin-bottom: 20px;
 color: #000;
+${mobile({ textAlign: "center", fontSize: "50px"})}
 `
 
 const TextWrapper = styled.div`
@@ -28,6 +30,7 @@ font-weight: 300;
 margin-bottom: 0px;
 color: #000;
 text-align: center;
+${mobile({fontSize: "20px"})}
 `
 
 const OurMission = () => {
