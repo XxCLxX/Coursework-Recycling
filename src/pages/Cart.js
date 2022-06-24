@@ -4,12 +4,15 @@ import Navbar from "../components/ShopSection/Navbar"
 import Footer from "../components/ShopSection/Footer"
 import Annoucement from "../components/ShopSection/Annoucement"
 import { Add, Remove } from "@mui/icons-material";
+import { mobile } from '../components/responsive'
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
 `
 
 const Wrapper = styled.div`
 padding: 20px;
+${mobile({ padding: "10px"})}
 `
 
 const Title = styled.h1`
@@ -34,6 +37,7 @@ color: ${props => props.type === "filled" && "white"};
 `
 
 const TopTexts = styled.div`
+${mobile({ display: "none"})}
 `
 
 const TopText = styled.span`
@@ -45,6 +49,7 @@ margin: 0px 10px;
 const Bottom = styled.div`
 display: flex;
 justify-content: space-between;
+${mobile({ flexDirection: "column"})}
 `
 
 const Info = styled.div`
@@ -62,6 +67,7 @@ height: 50vh;
 const Product = styled.div`
 display: flex;
 justify-content: space-between;
+${mobile({ flexDirection: "column"})}
 `
 
 const ProductDetail = styled.div`
@@ -109,11 +115,13 @@ const ProductQuantityContainer = styled.div`
 const ProductQuantity = styled.div`
   font-size: 24px;
   margin: 5px;
+  ${mobile({ margin: "5px 15px"})}
 `
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({ marginBottom: "20px"})}
 `
 
 const Hr = styled.hr`
@@ -146,7 +154,15 @@ color: #fff;
 font-weight: 600;
 `
 
+
 const Cart = () => {
+    const navigate = useNavigate();
+    const navigateToShop = () => {
+        navigate('/shop');
+    };
+
+
+
     return (
         <Container>
             <Navbar />
@@ -154,7 +170,7 @@ const Cart = () => {
             <Wrapper>
                 <Title>YOUR CART</Title>
                 <Top>
-                    <TopButton>CONTINUE SHOPPING</TopButton>
+                    <TopButton onClick={navigateToShop}>CONTINUE SHOPPING</TopButton>
                     <TopTexts>
                         <TopText>Shopping Cart (4)</TopText>
                         <TopText>Your Wishlist (0)</TopText>
