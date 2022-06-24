@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Badge } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 const NavContainer = styled.div`
 height: 60px;
@@ -64,6 +65,19 @@ margin-left: 25px;
 
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const navigateToDonation = () => {
+        navigate('/donation');
+    };
+
+    const navigateToRegister = () => {
+        navigate('/register');
+    };
+
+    const navigateToLogin = () => {
+        navigate('/login');
+    };
+
     return (
         <NavContainer>
             <NavWrapper>
@@ -78,9 +92,9 @@ const Navbar = () => {
                 <Center><Logo>Recycle</Logo></Center>
 
                 <Right>
-                    <MenuItem>DONATE</MenuItem>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>LOGIN</MenuItem>
+                    <MenuItem onClick={navigateToDonation}>DONATE</MenuItem>
+                    <MenuItem onClick={navigateToRegister}>REGISTER</MenuItem>
+                    <MenuItem onClick={navigateToLogin}>LOGIN</MenuItem>
                     <MenuItem>
                         <Badge badgeContent={4} color="primary">
                             <ShoppingCartIcon color="action" />
