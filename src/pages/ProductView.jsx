@@ -159,7 +159,7 @@ const ProductView = () => {
 
                     <AddContainer>
                         <QuantityContainer>
-                            <Remove />
+                            <Remove/>
                             <Quantity>1</Quantity>
                             <Add />
                         </QuantityContainer>
