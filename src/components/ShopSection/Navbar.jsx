@@ -52,6 +52,7 @@ ${mobile({marginRight: "15px"})}
 
 const Logo = styled.h1`
 font-weight: bold;
+cursor: pointer;
 ${mobile({ fontSize: "24px"})}
 `
 
@@ -72,6 +73,10 @@ ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const navigateToShopHome = () => {
+        navigate('/shop');
+    };
+
     const navigateToDonation = () => {
         navigate('/donation');
     };
@@ -99,7 +104,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
 
-                <Center><Logo>Recycle</Logo></Center>
+                <Center><Logo onClick={navigateToShopHome}>Recycle</Logo></Center>
 
                 <Right>
                     <MenuItem onClick={navigateToDonation}>DONATE</MenuItem>
