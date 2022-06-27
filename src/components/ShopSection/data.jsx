@@ -25,17 +25,17 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg",
-        title: "Shirt Style!",
+        img: "https://i.pinimg.com/736x/67/47/d5/6747d57557bee4f1ae54307ec5a0672f.jpg",
+        title: "Men's Fashion",
     },
     {
         id: 2,
-        img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        title: "Autumn Vibe",
+        img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg",
+        title: "Women's Fashion",
     },
     {
         id: 3,
-        img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        img: "https://ii1.pepperfry.com/media/catalog/product/b/l/800x880/black-metal-study-lamp-by-brightdaisy-black-metal-study-lamp-by-brightdaisy-jocy3x.jpg",
         title: "Appliances",
     },
 ];
@@ -47,7 +47,7 @@ export const popularProducts = [
     },
     {
         id: 2,
-        img: "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+        img: "https://i.ibb.co/8dYFjqh/blue-aesthetic-blue-aesthetic-clothes-clothing-apparel-sweatshirt-sweater-transparent-png-1191879.png",
     },
     {
         id: 3,
@@ -63,15 +63,28 @@ export const popularProducts = [
     },
     {
         id: 6,
-        img: "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+        img: "https://i.ibb.co/fNXnkvh/Seek-Png-com-sweater-png-1178786.png",
     },
     {
         id: 7,
-        img: "https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+        img: "https://i.ibb.co/4tSsq9Q/pngfind-com-peter-quill-png-3469849.png",
     },
     {
         id: 8,
-        img: "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+        img: "https://i.ibb.co/qJBWQPy/Seek-Png-com-kettle-png-1934716.png",
     },
-]
+];
+
+/*
+export const ItemView = [
+    {
+        name: "Fall Limited Edition Sneakers",
+        brand: "Sneaker Company",
+        size: "",
+        colour: "",
+        description: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+        price: 250.0,
+        img: [],
+    },
+];*/
 
