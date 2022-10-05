@@ -1,12 +1,15 @@
 import React from 'react'
 import { FaYoutube, FaTelegram, FaTwitter, FaVk } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
-import { FooterContainer, FooterWrap, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterLinksContainer, SocialMedia, SocialMediaWrap, WebsiteRights, SocialIcons, SocialIconLink, SocialLogo } from './FooterElements'
+import { FooterContainer, FooterWrap, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterLinksContainer, SocialMedia, SocialMediaWrap, WebsiteRights, SocialIcons, SocialIconLink, SocialLogo } from './FooterElements';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const toggleHome = () => {
         scroll.scrollToTop();
     }
+
+    const { t } = useTranslation(("home"));
 
     return (
         <FooterContainer>
@@ -14,30 +17,30 @@ const Footer = () => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                            <FooterLink to="/">How it works</FooterLink>
-                            <FooterLink to="/">Testimonals</FooterLink>
-                            <FooterLink to="/">Careers</FooterLink>
-                            <FooterLink to="/">Investors</FooterLink>
-                            <FooterLink to="/">Terms of Service</FooterLink>
+                            <FooterLinkTitle>{t("about")}</FooterLinkTitle>
+                            <FooterLink to="/">{t("howitworks")}</FooterLink>
+                            <FooterLink to="/">{t("testimonials")}</FooterLink>
+                            <FooterLink to="/">{t("careers")}</FooterLink>
+                            <FooterLink to="/">{t("investors")}</FooterLink>
+                            <FooterLink to="/">{t("terms")}</FooterLink>
                         </FooterLinkItems>
 
                         <FooterLinkItems>
-                            <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                            <FooterLink to="/">Contact</FooterLink>
-                            <FooterLink to="/">Support</FooterLink>
-                            <FooterLink to="/">Destinations</FooterLink>
-                            <FooterLink to="/">Sponsorship</FooterLink>
+                            <FooterLinkTitle>{t("contactus")}</FooterLinkTitle>
+                            <FooterLink to="/">{t("contact")}</FooterLink>
+                            <FooterLink to="/">{t("support")}</FooterLink>
+                            <FooterLink to="/">{t("destinations")}</FooterLink>
+                            <FooterLink to="/">{t("sponsorship")}</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
 
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Social Media</FooterLinkTitle>
-                            <FooterLink to="/">VK</FooterLink>
-                            <FooterLink to="/">Telegram</FooterLink>
-                            <FooterLink to="/">Twitter</FooterLink>
-                            <FooterLink to="/">Youtube</FooterLink>
+                            <FooterLinkTitle>{t("socialmedia")}</FooterLinkTitle>
+                            <FooterLink to="/">{t("vk")}</FooterLink>
+                            <FooterLink to="/">{t("telegram")}</FooterLink>
+                            <FooterLink to="/">{t("twitter")}</FooterLink>
+                            <FooterLink to="/">{t("youtube")}</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
@@ -45,7 +48,7 @@ const Footer = () => {
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/" onClick={toggleHome}>Recycle</SocialLogo>
-                        <WebsiteRights>Tomsk State University © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+                        <WebsiteRights>{t("tsu")} © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink gref="/" target="_blank" aria-label="VK">
                                 <FaVk />

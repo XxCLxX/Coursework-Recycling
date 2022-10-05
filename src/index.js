@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import counterReducer from './redux/reducer';
 import store from './redux/store';
-
+import "./i18n";
 /*const store = createStore(
   counterReducer,
 );*/

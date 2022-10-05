@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import Video from '../../../videos/TSU-Recycle.mp4'
 import { Button } from '../ButtonElement'
 import { useNavigate } from "react-router-dom";
 import { MainHomeContainer, MainHomeBg, VideoBg, MainHomeContent, MainHomeH1, MainHomeP, MainHomeBtnWrapper, MdCart, MdCartOutline, BoldRecycle, NormalRecycle } from './MainHomeElements'
+import { useTranslation } from 'react-i18next';
 
 const MainHomeSection = () => {
   const [hover, setHover] = useState(false)
@@ -20,6 +21,8 @@ const MainHomeSection = () => {
   //const onHover = () => {
   //  setHover(!hover)
   //}
+
+  const { t } = useTranslation(("common"));
 
   return (
     <MainHomeContainer>
@@ -40,7 +43,7 @@ const MainHomeSection = () => {
             dark="true"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-          >Donate{hover ? <NormalRecycle /> : <BoldRecycle />}</Button>
+          >{t("donate")}{hover ? <NormalRecycle /> : <BoldRecycle />}</Button>
 
           <Button
             onClick={navigateToShop}
@@ -48,7 +51,7 @@ const MainHomeSection = () => {
             dark="true"
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}>
-            Shop
+            {t("shop")}
             {isShown ? <MdCartOutline /> : <MdCart />}
           </Button>
         </MainHomeBtnWrapper>

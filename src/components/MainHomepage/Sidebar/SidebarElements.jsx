@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+// eslint-disable-next-line
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 import { FaTimes } from 'react-icons/fa'
@@ -68,6 +69,7 @@ export const SideBtnWrap = styled.div`
   justify-content: center;
 `
 
+/*
 export const SidebarRoute = styled(LinkR)`
   border-radius: 50px;
   background: #117cf8;
@@ -86,4 +88,4 @@ export const SidebarRoute = styled(LinkR)`
     background: #fff;
     color: #010606;
   }
-`
+`*/

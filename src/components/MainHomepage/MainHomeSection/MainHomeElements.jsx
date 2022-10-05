@@ -61,6 +61,7 @@ export const MainHomeH1 = styled.h1`
     font-size: 32px
   }
 `
+
 export const MainHomeP = styled.p`
   margin-top: 24px;
   color: #fff;

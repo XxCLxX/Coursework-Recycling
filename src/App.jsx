@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -14,19 +15,21 @@ import Cart from './pages/Cart';
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/donation" element={<DonationPage />} />
-        <Route path="/donation-form" element={<DonationForm />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/product-view" element={<ProductView />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </Router>
+    <Suspense fallback={null}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/donation" element={<DonationPage />} />
+          <Route path="/donation-form" element={<DonationForm />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/product-view" element={<ProductView />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
+    </Suspense>
   );
 }
 

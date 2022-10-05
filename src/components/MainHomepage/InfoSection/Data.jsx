@@ -38,7 +38,7 @@ export const homeObjThree = {
     lightText: false,
     lightTextDesc: false,
     topLine: 'Goal',
-    headline: 'Impact on the enviroment',
+    headline: 'Our Mission',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.',
     buttonLabel: 'Get Started',
     imgStart: false,

@@ -172,7 +172,7 @@ const Cart = () => {
                 <Top>
                     <TopButton onClick={navigateToShop}>CONTINUE SHOPPING</TopButton>
                     <TopTexts>
-                        <TopText>Shopping Cart (4)</TopText>
+                        <TopText>Shopping Cart (2)</TopText>
                         <TopText>Your Wishlist (0)</TopText>
                     </TopTexts>
                     <TopButton type="filled">CHECKOUT</TopButton>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLang } from './NavbarElements'
 import { IconContext } from 'react-icons';
 import { animateScroll as scroll } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 const Navbar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false)
@@ -23,6 +25,17 @@ const Navbar = ({ toggle }) => {
         scroll.scrollToTop();
     }
 
+    const { i18n, t } = useTranslation(("home"));
+    useEffect(() => {
+        if (localStorage.getItem("i18nextLng")?.length > 2) {
+            i18next.changeLanguage("en");
+        }
+    }, [])
+
+    const handleLanguageChange = (e) => {
+        i18n.changeLanguage(e.target.value);
+    }
+
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
@@ -40,7 +53,9 @@ const Navbar = ({ toggle }) => {
                                     spy={true}
                                     exact="true"
                                     offset={-80}
-                                >About</NavLinks>
+                                >
+                                    {t("about")}
+                                </NavLinks>
                             </NavItem>
 
                             <NavItem>
@@ -50,30 +65,36 @@ const Navbar = ({ toggle }) => {
                                     spy={true}
                                     exact="true"
                                     offset={-80}
-                                >Discover</NavLinks>
+                                >{t("discover")}</NavLinks>
                             </NavItem>
 
                             <NavItem>
                                 <NavLinks to='services'
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}>Services</NavLinks>
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}>{t("service")}</NavLinks>
                             </NavItem>
 
                             <NavItem>
                                 <NavLinks to='goal'
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}>Goal</NavLinks>
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}>{t("goal")}</NavLinks>
                             </NavItem>
 
                         </NavMenu>
                         <NavBtn>
-                            <NavBtnLink to="/rus">Rus</NavBtnLink>
+                            <NavBtnLang
+                            onChange={handleLanguageChange}
+                            value={localStorage.getItem("i18nextLng")}
+                            >
+                                <option value="en">EN</option>
+                                <option value="ru">RU</option>
+                            </NavBtnLang>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>
