@@ -64,7 +64,6 @@ const FormFillin = ({ submitForm }) => {
                         className='form-input'
                         value={values.hostel}
                         onChange={handleChange}>
-
                         <option value="parus">Parus</option>
                         <option value="mayak">Mayak</option>
                     </select>
@@ -88,10 +87,9 @@ const FormFillin = ({ submitForm }) => {
                     <label htmlFor='pickup' className='form-label'>Pickup Date</label>
                     <input
                         id='pickup'
-                        type='text'
+                        type='date'
                         name='pickup'
                         className='form-input'
-                        placeholder='DD/MM/YYYY'
                         value={values.pickup}
                         onChange={handleChange}
                     />
