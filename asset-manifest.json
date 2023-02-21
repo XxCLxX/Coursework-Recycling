@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.681e60f5.css",
+    "main.js": "/static/js/main.abb287c7.js",
+    "static/media/TSU-Recycle.mp4": "/static/media/TSU-Recycle.ff45dc2d35913b026bc3.mp4",
+    "static/media/recycle-box.svg": "/static/media/recycle-box.c269f983a7d2ae219ef2263bc9ca88a9.svg",
+    "static/media/form-1.svg": "/static/media/form-1.a107dcf722d1229f0965825e4bb3f103.svg",
+    "static/media/pack.svg": "/static/media/pack.d37d4be2d32f057e8796457b1bf33b66.svg",
+    "static/media/form-2.svg": "/static/media/form-2.d4b3d53442ccefac62c5e76e728311d5.svg",
+    "static/media/relax.svg": "/static/media/relax.6371b67a724ce8830d8b551ff0b9f735.svg",
+    "static/media/eco-conscious.svg": "/static/media/eco-conscious.0c690385d669da301449eae8e47ae7da.svg",
+    "static/media/web-shopping.svg": "/static/media/web-shopping.046cf0f43b509386a9b832c3af74c7c8.svg",
+    "static/media/window-shopping.svg": "/static/media/window-shopping.f05d668d567ed1519ba61d3dc345834c.svg",
+    "static/media/environmental-study.svg": "/static/media/environmental-study.d3494bb2e80ab77422557ffb8ecc8fdc.svg",
+    "static/media/warning.svg": "/static/media/warning.9a152d08f74847cf71480fce79c64429.svg",
+    "static/media/fill-form.svg": "/static/media/fill-form.50b06a735e7f8b4231a12801bfe3068d.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.681e60f5.css.map": "/static/css/main.681e60f5.css.map",
+    "main.abb287c7.js.map": "/static/js/main.abb287c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.681e60f5.css",
+    "static/js/main.abb287c7.js"
+  ]
+}
