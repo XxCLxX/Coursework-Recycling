@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.681e60f5.css",
-    "main.js": "/static/js/main.abb287c7.js",
+    "main.js": "/static/js/main.c46bc5ed.js",
     "static/media/TSU-Recycle.mp4": "/static/media/TSU-Recycle.ff45dc2d35913b026bc3.mp4",
     "static/media/recycle-box.svg": "/static/media/recycle-box.c269f983a7d2ae219ef2263bc9ca88a9.svg",
     "static/media/form-1.svg": "/static/media/form-1.a107dcf722d1229f0965825e4bb3f103.svg",
@@ -17,10 +17,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.681e60f5.css.map": "/static/css/main.681e60f5.css.map",
-    "main.abb287c7.js.map": "/static/js/main.abb287c7.js.map"
+    "main.c46bc5ed.js.map": "/static/js/main.c46bc5ed.js.map"
   },
   "entrypoints": [
     "static/css/main.681e60f5.css",
-    "static/js/main.abb287c7.js"
+    "static/js/main.c46bc5ed.js"
   ]
 }
