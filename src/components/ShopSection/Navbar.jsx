@@ -25,9 +25,9 @@ display: flex;
 align-items: center;
 `
 
-const Language = styled.span`
+const Language = styled.select`
 cursor: pointer;
-font-size: 14px;
+font-size: 15px;
 ${mobile({ display: "none" })}
 `
 
@@ -37,7 +37,7 @@ display: flex;
 align-items: center;
 margin-left: 25px;
 padding: 5px;
-${mobile({ display: "none"})}
+${mobile({ display: "none" })}
 `
 
 const Input = styled.input`
@@ -47,13 +47,13 @@ border: none;
 const Center = styled.div`
 flex: 1;
 text-align: center;
-${mobile({marginRight: "15px"})}
+${mobile({ marginRight: "15px" })}
 `
 
 const Logo = styled.h1`
 font-weight: bold;
 cursor: pointer;
-${mobile({ fontSize: "24px"})}
+${mobile({ fontSize: "24px" })}
 `
 
 const Right = styled.div`
@@ -97,7 +97,10 @@ const Navbar = () => {
         <NavContainer>
             <NavWrapper>
                 <Left>
-                    <Language>EN</Language>
+                    <Language>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </Language>
                     <SearchContainer>
                         <Input placeholder='search' />
                         <SearchIcon style={{ color: "gray", fontSize: 16 }} />

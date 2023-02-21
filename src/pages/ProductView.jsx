@@ -7,6 +7,8 @@ import { mobile } from "../components/responsive";
 import { MdRemove, MdAdd } from "react-icons/md"
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, selectCount } from '../redux/counterSlice';
+import { popularProducts } from "../components/ShopSection/data"
+import { useParams } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -141,16 +143,20 @@ const ProductView = () => {
   const counter = useSelector(selectCount);
   const dispatch = useDispatch();
 
+  const proid = useParams();
+  const proDetail = popularProducts.filter(x => x.id === proid.id)
+  const product = proDetail[0];
+
   return (
     <Container>
       <Navbar />
       <Annoucement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_51/3436914/w23202248_pebblegrey_2000_alt_9.jpg" />
+          <Image src="https://i.ibb.co/8dYFjqh/blue-aesthetic-blue-aesthetic-clothes-clothing-apparel-sweatshirt-sweater-transparent-png-1191879.png"/>
         </ImgContainer>
         <InfoContainer>
-          <Title>Winter Jacket</Title>
+          <Title>Winter Pullover</Title>
           <Desc>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet
             ligula semper egestas interdum. Nullam scelerisque, eros sed scelerisque feugiat,

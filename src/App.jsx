@@ -23,7 +23,7 @@ function App() {
           <Route path="/donation-form" element={<DonationForm />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/products" element={<ProductList />} />
-          <Route path="/product-view" element={<ProductView />} />
+          <Route path="/product-view/:id" element={<ProductView />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
